@@ -152,3 +152,18 @@ footer {
     color: #94a3b8;
     font-size: 0.875rem;
 }
+
+.redes-sociais {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.redes-sociais img {
+  transition: transform 0.3s;
+}
+
+.redes-sociais img:hover {
+  transform: scale(1.1);
+}
