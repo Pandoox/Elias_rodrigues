@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elias Rodrigues</title>
+  <meta name="adblock" content="none">
+  <title>Elias Rodrigues | Desenvolvedor Python e Java</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="panda.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="assets/icons/panda.png" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,15 +14,15 @@
     <h1>Elias <span>Rodrigues</span></h1>
     <nav>
       <ul class="navegacao-primaria">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Repositórios</a></li>
-        <li><a href="#">Mídias</a></li>
-        <li><a href="#">Sobre</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#repositorios">Repositórios</a></li>
+        <li><a href="#midias">Mídias</a></li>
+        <li><a href="#sobre">Sobre</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="apresentacao">
+  <section id="home" class="apresentacao">
     <div class="texto">
       <h2>Olá! Eu sou Elias Rodrigues</h2>
       <h3>Desenvolvedor Python e Java</h3>
@@ -30,11 +31,11 @@
       <br>
       <a href="cv/Elias_rodrigues.pdf" class="botao">Visualizar CV</a>
     </div>
-    <img src="1.png" alt="Elias Rodrigues" class="foto-perfil">
+    <img src="assets/images/perfil.png" alt="Elias Rodrigues" class="foto-perfil">
   </section>
 
-  <section class="sobre">
-    <img src="1.png" alt="Foto Elias" class="foto-perfil">
+  <section id="sobre" class="sobre">
+    <img src="assets/images/perfil.png" alt="Foto Elias" class="foto-perfil">
     <div class="descricao">
       <h2>Eu Sou Dev Elias</h2>
       <p>Estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>, apaixonado por tecnologia e em constante evolução na área de desenvolvimento e suporte técnico.</p>
@@ -51,46 +52,76 @@
 
   <section class="skills">
     <h3>Minhas Skills</h3>
-
-    <div class="skill-item">
-      <p>Python</p>
-      <div class="skill-bar"><span style="width: 90%;"></span></div>
-    </div>
-
-    <div class="skill-item">
-      <p>Java</p>
-      <div class="skill-bar"><span style="width: 85%;"></span></div>
-    </div>
-
-    <div class="skill-item">
-      <p>SQL</p>
-      <div class="skill-bar"><span style="width: 70%;"></span></div>
-    </div>
-
-    <div class="skill-item">
-      <p>JavaScript</p>
-      <div class="skill-bar"><span style="width: 60%;"></span></div>
-    </div>
-
-    <div class="skill-item">
-      <p>ReactJS</p>
-      <div class="skill-bar"><span style="width: 50%;"></span></div>
-    </div>
-
-    <div class="skill-item">
-      <p>HTML</p>
-      <div class="skill-bar"><span style="width: 80%;"></span></div>
+    
+    <div class="skills-container">
+      <div class="skill-item">
+        <p>Python</p>
+        <div class="skill-bar"><span style="width: 90%;"></span></div>
+      </div>
+      
+      <div class="skill-item">
+        <p>Java</p>
+        <div class="skill-bar"><span style="width: 85%;"></span></div>
+      </div>
+      
+      <div class="skill-item">
+        <p>SQL</p>
+        <div class="skill-bar"><span style="width: 70%;"></span></div>
+      </div>
+      
+      <div class="skill-item">
+        <p>JavaScript</p>
+        <div class="skill-bar"><span style="width: 60%;"></span></div>
+      </div>
+      
+      <div class="skill-item">
+        <p>ReactJS</p>
+        <div class="skill-bar"><span style="width: 50%;"></span></div>
+      </div>
+      
+      <div class="skill-item">
+        <p>HTML</p>
+        <div class="skill-bar"><span style="width: 80%;"></span></div>
+      </div>
     </div>
   </section>
 
   <footer>
     <p>Elias Rodrigues — Todos os direitos reservados © 2025</p>
-    <div class="redes-sociais">
-      <a href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp" width="30"></a>
-      <a href="https://youtube.com/SEUCANAL" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670147.png" alt="YouTube" width="30"></a>
-      <a href="https://linkedin.com/in/SEUPERFIL" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/3669/3669739.png" alt="LinkedIn" width="30"></a>
-      <a href="https://github.com/SEUUSER" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/3669/3669733.png" alt="GitHub" width="30"></a>
+    <div class="social-container">
+      <a href="https://wa.me/seunumero" class="social-icon" data-social="whatsapp">
+        <img src="assets/icons/whatsapp.png" alt="WhatsApp" width="30">
+      </a>
+      <a href="https://linkedin.com/in/seuperfil" class="social-icon" data-social="linkedin">
+        <img src="assets/icons/linkedin.png" alt="LinkedIn" width="30">
+      </a>
+      <a href="https://github.com/seuusuario" class="social-icon" data-social="github">
+        <img src="assets/icons/github.png" alt="GitHub" width="30">
+      </a>
+      <a href="https://youtube.com/seucanal" class="social-icon" data-social="youtube">
+        <img src="assets/icons/youtube.png" alt="YouTube" width="30">
+      </a>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Verifica elementos bloqueados
+      const checkBlockedElements = () => {
+        const elements = document.querySelectorAll('.social-icon, .skill-bar');
+        elements.forEach(el => {
+          if(getComputedStyle(el).display === 'none' || el.offsetParent === null) {
+            console.log('Elemento bloqueado detectado:', el);
+            el.style.display = 'block';
+            el.style.visibility = 'visible';
+          }
+        });
+      };
+      
+      // Verifica a cada 500ms por 5 segundos
+      const interval = setInterval(checkBlockedElements, 500);
+      setTimeout(() => clearInterval(interval), 5000);
+    });
+  </script>
 </body>
 </html>
