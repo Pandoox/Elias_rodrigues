@@ -199,3 +199,88 @@ footer {
 .social-icon:hover img {
     filter: grayscale(0);
 }
+
+
+
+
+/* Seção principal */
+.curriculos {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.curriculos h3 {
+  color: #06b6d4;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+/* Wrapper do carrossel com setas */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Faixa visível do carrossel */
+.carousel-track {
+  overflow: hidden;
+  width: 80%;
+}
+
+/* Carrossel com imagens lado a lado */
+.carousel {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.5s ease;
+  width: max-content;
+}
+
+/* Imagens dos currículos */
+.curriculo-img {
+  width: 200px;
+  border-radius: 8px;
+  border: 2px solid #06b6d4;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.curriculo-img:hover {
+  transform: scale(1.1);
+}
+
+/* Botões de navegação */
+.arrow {
+  background-color: transparent;
+  border: none;
+  color: #06b6d4;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 1rem;
+  z-index: 1;
+}
+
+.arrow:hover {
+  color: #fff;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .carousel-track {
+    width: 90%;
+  }
+
+  .curriculo-img {
+    width: 150px;
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+  }
+}
+

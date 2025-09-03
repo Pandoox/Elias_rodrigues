@@ -50,6 +50,48 @@
     </div>
   </section>
 
+
+
+<section id="curriculos" class="curriculos">
+  <h3>Meus Currículos</h3>
+  <div class="carousel-wrapper">
+    <button class="arrow left">&#9664;</button>
+    <div class="carousel-track">
+      <div class="carousel">
+        <img src="FotosCurrilos/Montagem e manutenção de micro.png" alt="Currículo 1" class="curriculo-img" />
+        <img src="FotosCurrilos/AUTOMAÇÃO DE TESTES WEB_page-0001.jpg" alt="Currículo 1" class="curriculo-img" />
+        <img src="FotosCurrilos/TESTE DE PERFORMANCE_page-0001.jpg" alt="Currículo 2" class="curriculo-img" />
+        <img src="FotosCurrilos/METODOLOGIAS ÁGEIS E BDD_page-0001.jpg" alt="Currículo 3" class="curriculo-img" />
+        <img src="FotosCurrilos/DESENVOLVENDO PROJETO COM PYTHON_page-0001.jpg" alt="Currículo 4" class="curriculo-img" />
+        <img src="FotosCurrilos/SQL-SERVER-E-BANCOS-RELACIONAIS.jpg" alt="Currículo 5" class="curriculo-img" />
+        <img src="FotosCurrilos/ACESSO-REMOTO-A-MAQUINAS-LINUX.jpg" alt="Currículo 6" class="curriculo-img" />
+        <img src="FotosCurrilos/Abstraindo-um-Bootcamp-Usando-orientação-a-objetos-em-java.jpg" alt="Currículo 6" class="curriculo-img" />
+        <img src="FotosCurrilos/Estrutura de dados em java.jpg" alt="Currículo 6" class="curriculo-img" />
+        <img src="FotosCurrilos/Programação-Orientada-a-objetos.jpg" alt="Currículo 6" class="curriculo-img" />
+        <img src="FotosCurrilos/Desenvolvimento-Web-com-Python-e-Django.jpg" alt="Currículo 6" class="curriculo-img" />
+        <img src="FotosCurrilos/Introdução-ao-Desenvolvimento-Moderno-de-Software.jpg" alt="Currículo 3" class="curriculo-img" />
+        <img src="FotosCurrilos/Introdução-a-programação-com-Python.jpg" alt="Currículo 3" class="curriculo-img" />
+        <img src="FotosCurrilos/Modelando um banco de dados na pratica com SQL server.jpg" alt="Currículo 3" class="curriculo-img" />
+        <img src="FotosCurrilos/Principais Protocolos de Comunicação da internet.jpg" alt="Currículo 3" class="curriculo-img" />
+        <img src="FotosCurrilos/Testes unitarios com Junit.jpg" alt="Currículo 3" class="curriculo-img" />
+        <img src="FotosCurrilos/Trabalhando com banco de dados SQL e NoSQl.jpg" alt="Currículo 3" class="curriculo-img" />
+        <img src="FotosCurrilos/Trabaçhando com Collections Java.jpg" alt="Currículo 3" class="curriculo-img" />
+        <img src="FotosCurrilos/Trabalhando em Equipes Ageis.jpg" alt="Currículo 3" class="curriculo-img" />
+        <img src="FotosCurrilos/Tratamento de Exceções em java.jpg" alt="Currículo 3" class="curriculo-img" />
+
+
+      </div>
+    </div>
+    <button class="arrow right">&#9654;</button>
+  </div>
+</section>
+
+
+
+
+
+
+
   <section id="repositorios" class="skills">
     <h3>Minhas Skills</h3>
 
@@ -104,5 +146,91 @@
     </div>
     <p>Elias Rodrigues — Todos os direitos reservados © 2025</p>
   </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  // Seleciona os elementos principais
+  const carousel = document.querySelector('.carousel');
+  const track = document.querySelector('.carousel-track');
+  const leftBtn = document.querySelector('.arrow.left');
+  const rightBtn = document.querySelector('.arrow.right');
+
+  let scrollX = 0; // Posição atual do carrossel
+  const scrollStep = 220; // Distância a mover por clique
+
+  // Atualiza a posição do carrossel com limites
+  function updateCarousel() {
+    const totalWidth = carousel.scrollWidth;
+    const visibleWidth = track.offsetWidth;
+    const maxScroll = totalWidth - visibleWidth;
+
+    scrollX = Math.max(0, Math.min(scrollX, maxScroll));
+    carousel.style.transform = `translateX(-${scrollX}px)`;
+  }
+
+  // Botão esquerdo
+  leftBtn.addEventListener('click', () => {
+    scrollX -= scrollStep;
+    updateCarousel();
+  });
+
+  // Botão direito
+  rightBtn.addEventListener('click', () => {
+    scrollX += scrollStep;
+    updateCarousel();
+  });
+
+  // Clique na imagem para abrir em tela cheia
+  document.querySelectorAll('.curriculo-img').forEach(img => {
+    img.addEventListener('click', () => {
+      const fullScreen = document.createElement('div');
+      fullScreen.style.position = 'fixed';
+      fullScreen.style.top = 0;
+      fullScreen.style.left = 0;
+      fullScreen.style.width = '100vw';
+      fullScreen.style.height = '100vh';
+      fullScreen.style.backgroundColor = 'rgba(0,0,0,0.9)';
+      fullScreen.style.display = 'flex';
+      fullScreen.style.justifyContent = 'center';
+      fullScreen.style.alignItems = 'center';
+      fullScreen.style.zIndex = 9999;
+
+      const fullImg = document.createElement('img');
+      fullImg.src = img.src;
+      fullImg.alt = img.alt;
+      fullImg.style.maxWidth = '90%';
+      fullImg.style.maxHeight = '90%';
+      fullImg.style.border = '4px solid #06b6d4';
+      fullImg.style.borderRadius = '12px';
+      fullImg.style.boxShadow = '0 0 20px rgba(0,0,0,0.5)';
+
+      fullScreen.appendChild(fullImg);
+      document.body.appendChild(fullScreen);
+
+      // Fecha ao clicar fora da imagem
+      fullScreen.addEventListener('click', () => {
+        document.body.removeChild(fullScreen);
+      });
+    });
+  });
+</script>
+
+
+
+
+
+
 </body>
 </html>
